@@ -1,0 +1,1272 @@
+<!doctype html>
+<html class="overflow-x-hidden"">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<style>
+
+  h1{
+    font-family: 'Playfair Display', serif;
+  }
+  #luxury .luxu {
+    width: 250px;
+    margin: auto;
+    height: 350px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.616);
+    padding: 0;
+
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* adjust the overlay color */
+    color: #fff;
+    /* adjust the text color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    /* hide the overlay by default */
+    transition: opacity 0.3s;
+    /* add a transition effect */
+  }
+
+  #luxury .luxu .lux-box1 {
+    background-image: url(/src/img/Vintage/Vintage8-removebg-preview.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    /* add this */
+  }
+
+  #luxury .lux-box1:hover .overlay {
+    opacity: 1;
+    /* show the overlay on hover */
+  }
+ 
+  .nav-colored { background-color:#000; }
+  .nav-transparent { background-color:transparent;}
+  
+  
+</style>
+
+
+<body class="bg-black ">
+
+  <!-- Nav Open -->
+  <section class="">
+    <div style="background-image: url(./img/landing.png) ;  "
+      class="bg-cover bg-no-repeat h-[90vh] md:h-screen bg-center">
+      <nav class=" bg-blac transperent  top-0 z-50 w-full fixed " id="nav">
+        <div class="max-w-screen-xl flex flex-wrap  items-center justify-between mx-auto p-4">
+          <a href="" class="flex items-center space-x-3 rtl:space-x-reverse" style="text-decoration: none;">
+            <img src="./img/Gold_Luxury_Initial_Logo-removebg-preview.png" class="h-20 w-20" alt="Flowbite Logo" />
+            <span
+              class="self-center text-2xl font-semibold whitespace-nowrap text-[#C0C0C0] hover:text-[#D6A553] dark:text-[#C0C0C0]">Alberto</span>
+          </a>
+
+          
+
+          <button data-collapse-toggle="navbar-default" type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-default" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15" />
+            </svg>
+          </button>
+          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul
+              class="font-medium flex flex-col p-4 md:p-0 mt-4  rounded-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+              <li>
+                <a href="#" style="text-decoration: none;"
+                  class="block font-bold py-2 px-3 text-[#C0C0C0] hover:text-[#D6A553]  rounded md:bg-transparent  md:p-0 dark:text-[#C0C0C0] "
+                  aria-current="page">Home</a>
+              </li>
+
+              <li class="">
+
+                <button id="dropdownDelayButton" data-dropdown-toggle="dropdownDelay" data-dropdown-delay="500"
+                  data-dropdown-trigger="hover"
+                  class=" text-[#C0C0C0] hover:text-[#D6A553] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  type="button">Products <svg class="w-2.5 h-2.5 ms-3 " aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="m1 1 4 4 4-4" />
+                  </svg>
+                </button>
+
+                <!-- Dropdown menu -->
+                <div id="dropdownDelay"
+                  class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                  <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDelayButton">
+                    <li>
+                      <a href="#Vintage Watches"
+                        class="block px-4 py-3 text-black hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-[#C0C0C0]"
+                        style="text-decoration: none; ">Vintage</a>
+                    </li>
+                    <li>
+                      <a href="#LuxuryWatches" style="text-decoration: none;"
+                        class="block px-4 py-3 text-black hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-[#C0C0C0]">Luxury</a>
+                    </li>
+                    <li>
+                      <a href="#SmartWatches" style="text-decoration: none;"
+                        class="block px-4 py-3 text-black hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-[#C0C0C0]">Smart</a>
+                    </li>
+                    </ul>
+                </div> 
+
+              </li>
+
+              <li>
+                <a href="#About" style="text-decoration: none;"
+                  class="block py-2 px-3 text-[#C0C0C0] hover:text-[#D6A553] rounded  md:hover:bg-transparent md:border-0 md:hover:text-[#D6A553] md:p-0 dark:text-[#C0C0C0] md:dark:hover:text-[#D6A553] dark:hover:bg-gray-700 dark:hover:text-[#C0C0C0] md:dark:hover:bg-transparent">About</a>
+              </li>
+              <li>
+                <a href="#News" style="text-decoration: none;"
+                  class="block py-2 px-3 text-[#C0C0C0] hover:text-[#D6A553] rounded  md:hover:bg-transparent md:border-0 md:hover:text-[#D6A553] md:p-0 dark:text-[#C0C0C0] md:dark:hover:text-[#D6A553] dark:hover:bg-gray-700 dark:hover:text-[#C0C0C0] md:dark:hover:bg-transparent">News</a>
+              </li>
+              <li>
+                <a href="#Gallary" style="text-decoration: none;"
+                  class="block py-2 px-3 text-[#C0C0C0] hover:text-[#D6A553] rounded  md:hover:bg-transparent md:border-0 md:hover:text-[#D6A553] md:p-0 dark:text-[#C0C0C0] md:dark:hover:text-[#D6A553] dark:hover:bg-gray-700 dark:hover:text-[#C0C0C0] md:dark:hover:bg-transparent">Gallery</a>
+              </li>
+              <li>
+                <a href="#Service" style="text-decoration: none;"
+                  class="block py-2 px-3 text-[#C0C0C0] hover:text-[#D6A553] rounded  md:hover:bg-transparent md:border-0 md:hover:text-[#D6A553] md:p-0 dark:text-[#C0C0C0] md:dark:hover:text-[#D6A553] dark:hover:bg-gray-700 dark:hover:text-[#C0C0C0] md:dark:hover:bg-transparent">Service</a>
+              </li>
+
+              <li>
+                <a href="#Contact" style="text-decoration: none;"
+                  class="block py-2 px-3 text-[#C0C0C0] hover:text-[#D6A553] rounded  md:hover:bg-transparent md:border-0 md:hover:text-[#D6A553] md:p-0 dark:text-[#C0C0C0] md:dark:hover:text-[#D6A553] dark:hover:bg-gray-700 dark:hover:text-[#C0C0C0] md:dark:hover:bg-transparent">Contact</a>
+              </li>
+
+             
+                <li class="text-center py-2 text-[#C0C0C0]" id="visitorCount">visitorCount: </li>
+              
+            </ul>
+
+            
+          </div>
+        </div>
+      </nav>
+
+      <!-- Nav close -->
+
+      <!-- Landing Page Open -->
+      <div class=" text-center  lg:pt-[30vh]  bg-contain bg-no-repeat ">
+        <p class=" text-[#d6a653fd] text-2xl">CREATING A FEATURE CLASSIC</p>
+        <H1 class="font-sans hidden md:flex text-7xl justify-center  text-[#C0C0C0]">Everthing that's new and now</H1>
+        <H1 class="font-sans flex md:hidden justify-center text-3xl text-[#C0C0C0]">Everthing that's new and now</H1>
+        <h6 class=" text-[#C0C0C0] hidden md:flex justify-center   pt-3 " style="font-style: italic;  font-size: 20px;  text-decoration: 
+none solid rgb(231, 224, 221);  ">Our extensive collection of men’s and women’s watches covers every style and taste,
+          <br> from cutting-edge modern designs to ageless classics.
+        </h6>
+      </div>
+      <!-- Landing Page Close -->
+
+      <!--Button open  -->
+      <div>
+        <a href="" class="flex flex-row gap-3 justify-center md:mt-5 " style="text-decoration: none;">
+          <div class="flex justify-center mt-4 items-center text-center" style="border-top: 2px solid white;
+          border-bottom: 2px solid white;
+          border-style: solid solid none none;
+          border-width: 2px 0;
+          padding: 0 30px;
+          border-color: #d6a653fd;
+        "></div>
+          <button class="border  text-[#d6a653fd] py-3 px-5  rounded-md" style="border-color:#d6a653fd ;">
+
+            <span>Shop </span>
+          </button>
+          <div class="flex justify-center mt-4 items-center text-center" style="border-top: 2px solid white;
+        border-bottom: 2px solid white;
+        border-style: solid solid none none;
+        border-width: 2px 0;
+        padding: 0 30px;
+        border-color: #d6a653fd;
+      "></div>
+        </a>
+
+      </div>
+      <!--Button close  -->
+    </div>
+  </section>
+
+
+  <section class=" flex justify-center">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 items-center justify-center   bg-black"
+      style="margin-top: 250px; ">
+
+      <div
+        class="bg-black w-96 px-3 h-[40rem] flexflex-col justify-center text-center space-y-3 opacity-100 bg-cover bg-center  bg-no-repeat">
+        <a href="#Vintage Watches" style="text-decoration: none;">
+          <h2 class="text-[#d6a653fd] text-4xl">Vintage Watches</h2>
+          <h4 class="text-[#C0C0C0] mb-3 italic">Limited Time Deals</h4>
+          <a href=""
+            class="border border-[#d6a653fd] py-1  text-center hover:bg-[#d6a653ae] text-[#d6a653] px-2 rounded-full "
+            style="text-decoration: none; border-color: #d6a653fd;">></a>
+
+        </a>
+
+        <div class=" flex justify-center"><img src="./img/Vintage watch cover.jpg" alt="" class="w-96 rounded-md ">
+        </div>
+      </div>
+
+      <div class="bg-lack w-96 px-3  h-[40rem] text-center space-y-5 opacity-100 bg-contain bg-center bg-no-repeat">
+        <a href="" style="text-decoration: none; ">
+          <h2 class="text-[#d6a653fd] text-4xl">Luxury Watches</h2>
+          <h4 class="text-[#C0C0C0] mb-3 italic">Limited Time Deals</h4>
+          <a href=""
+            class="border border-[#d6a653fd] py-1  text-center hover:bg-[#d6a653ae] text-[#d6a653] px-2 rounded-full "
+            style="text-decoration: none; border-color: #d6a653fd;">></a>
+        </a>
+        <div class=" flex justify-center rounded-md items-center"><img src="img/Luxury/lux 11.jpg" alt=""
+            class=" w-96 items-center  rounded-md"></div>
+      </div>
+
+      <div class="bg-black w-96 px-3  h-[40rem] text-center space-y-3 opacity-100 bg-covern bg-center  bg-no-repeat">
+        <a href="#smartWatches" style="text-decoration: none;">
+          <h2 class="text-[#d6a653fd] text-4xl">Smart Watches</h2>
+          <h4 class="text-[#C0C0C0] mb-3 italic">Limited Time Deals</h4>
+          <a href=""
+            class="border border-[#d6a653fd] py-1  text-center hover:bg-[#d6a653ae] text-[#d6a653] px-2 rounded-full "
+            style="text-decoration: none; border-color: #d6a653fd;">></a>
+
+        </a>
+        <div class=" flex justify-center rounded-md"><img src="./img/Smart watch cover.jpg" alt=""
+            class=" w-96 items-center  rounded-md"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- about us start -->
+
+  <!--============= about section 1================= -->
+  <section class=" flex flex-col  items-center mx-auto py-10 mt-10" id="About">
+    <div>
+      <h1 class="text-center text-3xl text-[#d6a653fd] font-semibold uppercase font-display"><span
+          class="text-[#C0C0C0]">About</span>
+        Alberto Watch Company <br></h1>
+    </div>
+    <div class="grid grid-cols-2 mt-6 gap-8 md:w-[80%]   px-40">
+      <!-- ==========image div for vintage watch================== -->
+
+      <div class="col-span-12 md:col-span-1 items-center   border-2 border-secondary">
+
+
+        <div id="custom-controls-gallery" class="relative w-full lg:h-[100%] h-[60vh]" data-carousel="slide">
+          <!-- Carousel wrapper -->
+          <div class="relative h-[100%] overflow-hidden rounded-lg ">
+            <!-- Item 1 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <img src="img/Gallery/Gallery 11.jpg"
+                class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                alt="watch image">
+            </div>
+            <!-- Item 2 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+              <img src="img/Gallery/Gallery 10.jpg"
+                class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                alt="watch image">
+            </div>
+            <!-- Item 3 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <img src="img/Gallery/Gallery 12.jpg"
+                class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                alt="watch image">
+            </div>
+            <!-- Item 4 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <img src="img/Gallery/Gallery 9.jpg"
+                class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                alt="watch image">
+            </div>
+            <!-- Item 5 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <img src="img/Gallery/Gallery 8.jpg"
+                class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+            </div>
+          </div>
+          <div class="flex justify-center items-center pt-2 pb-5">
+            <button type="button"
+              class="flex justify-center items-center me-4 h-full cursor-pointer group focus:outline-none"
+              data-carousel-prev>
+              <span class=" hover:text-gray-900  group-focus:text-gray-900 ">
+                <svg class="rtl:rotate-180 w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M13 5H1m0 0 4 4M1 5l4-4" />
+                </svg>
+                <span class="sr-only">Previous</span>
+              </span>
+            </button>
+            <button type="button"
+              class="flex justify-center items-center h-full cursor-pointer group focus:outline-none"
+              data-carousel-next>
+              <span
+                class="text-gray-400 hover:text-gray-900 dark:hover:text-[#C0C0C0] group-focus:text-gray-900 dark:group-focus:text-[#C0C0C0]">
+                <svg class="rtl:rotate-180 w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M1 5h12m0 0L9 1m4 4L9 9" />
+                </svg>
+                <span class="sr-only">Next</span>
+              </span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ==========text div for about================== -->
+      <div class="col-span-12 md:col-span-1  items-center p-10  gap-5 md:gap-0 border-2 border-secondary">
+        <div class="text-lg text-[#C0C0C0] leading-relaxed text-justify">
+          <p>Founded in the heart of Nigeria, Alberto Watch Company has been crafting timeless pieces since 2001. With
+            a passion for precision and an eye for detail, our founders, Alberto and James sam, envisioned creating
+            watches that were not just timekeepers but symbols of elegance and heritage.</p>
+          <p>From the rolling hills of Geneva to the bustling streets of Zurich, our watches have adorned the wrists
+            of connoisseurs and enthusiasts alike. Each watch we create tells a story, a testament to the relentless
+            pursuit of perfection and the rich tradition of Swiss watchmaking.</p>
+          <div class="mt-4 ">
+            <button class="rounded-lg px-10 py-3 text-[#d6a653fd] border border-secondary">View Our product</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!--============= about section 1================= -->
+
+
+
+
+  <!-- ================aService section 1======================= -->
+  <section class="w-[80%] md:w-[70%] mt-[250px] justify-center mx-auto py-10 " id="Service">
+    <div>
+      <p class="text-center text-3xl font-display font-semibold text-[#C0C0C0]"><span
+          class="text-[#d6a653fd]">Why</span> Choose
+        Alberto Watch</p>
+    </div>
+    <div class="grid grid-cols-12">
+      <div class="md:col-span-3 col-span-12  py-10">
+        <div class="flex flex-col items-start leading-relaxed mt-14 p-6 ">
+          <i class="fas fa-stopwatch text-3xl text-[#C0C0C0] mr-4"></i>
+          <div>
+            <h3 class="text-xl font-semibold my-2 text-[#C0C0C0]">Elegant design</h3>
+            <p class="leading-relaxed text-[#C0C0C0]">Our watches feature timeless designs that blend classic elegance
+              with modern
+              sophistication, making them perfect for any occasion.</p>
+          </div>
+        </div>
+        <div class="flex flex-col items-start leading-relaxed mt-14 p-6 ">
+          <i class="fas fa-stopwatch text-3xl text-[#C0C0C0] mr-4 "></i>
+          <div>
+            <h3 class="text-xl font-semibold my-2 text-[#C0C0C0]">High Performance</h3>
+            <p class="leading-relaxed text-[#C0C0C0]">Alberto Watch is engineered for accuracy and durability, ensuring
+              top-notch
+              performance in every timepiece.</p>
+          </div>
+        </div>
+      </div>
+      <div class="md:col-span-6 col-span-12">
+        <div class="flex justify-center items-center my-auto h-[100%] shadow-lg shadow-secondary"><img
+            src="https://preview.colorlib.com/theme/watch/img/c1.png" alt="" class="shadow-lg shadow-secondary"></div>
+      </div>
+      <div class="md:col-span-3 col-span-12">
+        <div class="flex flex-col items-start leading-relaxed mt-14 p-6 ">
+          <i class="fas fa-cogs text-3xl mr-4 text-[#C0C0C0]"></i>
+
+          <div>
+            <h3 class="text-xl font-semibold my-2 text-[#C0C0C0]">Exceptional Craftsmanship</h3>
+            <p class="leading-relaxed text-[#C0C0C0]">Each Alberto Watch is meticulously crafted using the finest
+              materials and
+              techniques, reflecting our commitment to quality and excellence.</p>
+          </div>
+        </div>
+        <div class="flex flex-col items-start leading-relaxed mt-14 p-6 ">
+          <i class="fas fa-microchip text-3xl text-[#C0C0C0] mr-4"></i>
+
+          <div>
+            <h3 class="text-xl font-semibold my-2 text-[#C0C0C0]">Innovative Features</h3>
+            <p class="leading-relaxed text-[#C0C0C0]">We integrate the latest technology to offer innovative features,
+              providing you
+              with a seamless and enhanced user experience.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ================about section 2======================= -->
+  <!-- about us end -->
+
+
+
+
+  <!-- ==================vintage wrist watch start=============== -->
+  <!-- 
+  <div class="col-sm-3 luxu">
+    <div class="col-sm-12 lux-box1 h-75"> -->
+  <!-- your content here -->
+  <!-- <div class="overlay"> add this overlay div -->
+  <!-- your overlay content here -->
+  <!-- <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#watchModal">View More</button>
+        </div>
+      </div>
+    <div class="col-sm-12">
+      <div class="lux-name text fw-bold ps-2 text-light ">
+        Rolex leather 2000 straps
+      </div>
+      <div class="text-light p-2">
+        <span class="text fs-5">$400</span>
+        <button class="btn btn-outline-light float-end"> Buy</button>
+      </div>
+    </div>
+  </div> -->
+
+  <section class="w-[90%] flex flex-col justify-center items-center mx-auto py-10" id="Vintage Watches">
+    <div class="text-[#C0C0C0] text-center ">
+      <h3 class="text-3xl uppercase font-semibold font-display"><span class="text-[#d6a653df]">Vintage</span> Elegance
+      </h3><br>
+      <p class="text-lg">A classic timepiece from the 1950s, featuring intricate details and a timeless design.</p>
+    </div>
+    <!-- ==========first 3 vintage watches===========s -->
+    <div class="grid grid-cols-12  justify-center w-[80%] py-10 px-10 gap-6">
+      <div
+        class="vintage overflow-hidden object-contain ease-in duration-300 md:col-span-4 col-span-12  p-2  rounded-lg  ">
+        <div class="">
+          <img src="./img/Vintage/Vintage5.jpg" alt="" class="vintage-img md:w-full md:h-[280px]">
+        </div>
+        <div>
+          <p class="border border-[#d6a653df] w-[100%] px-10 my-4"></p>
+          <p class="text-[#C0C0C0]">Heritage Elegance</p>
+          <p class="text-[1.1rem] font-semibold text-[#C0C0C0]">$3,500</p>
+          <!--========== button modal================= -->
+          <div class="mt-2">
+            <button data-modal-target="default-modal" data-modal-toggle="default-modal"
+              class="px-10 py-3 rounded-md border border-secondary bg-none hover:bg-secondary ease-in duration-300 w-[100%] text-[#C0C0C0] hover:text-primary font-medium"
+              type="button">View Details</button>
+          </div>
+          <!--========== button modal================= -->
+
+          <div id="mod">
+            <!-- Main modal -->
+            <div id="default-modal" tabindex="-1" aria-hidden="true"
+              class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 mt-6">
+              <div class="relative p-4  max-w-xl max-h-full">
+                <!-- Modal content -->
+                <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                  <!-- Modal header -->
+                  <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-[#C0C0C0]">
+                      Heritage Elegance Watch
+                    </h3>
+                    <button type="button"
+                      class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-[#C0C0C0]"
+                      data-modal-hide="default-modal">
+                      <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                      </svg>
+                      <span class="sr-only">Close modal</span>
+                    </button>
+                  </div>
+                  <!-- Modal body -->
+                  <div class=" md:p-5 space-y-4 flex md:flex-row flex-col gap-4 items-center justify-center">
+                    <img src="./img/Vintage/Vintage5.jpg" alt="" class=" h-[280px] rounded-md">
+
+                  </div>
+                  <!-- Modal footer -->
+                  <div class="px-6">
+                    <p class="text-primary"><span class="font-bold">Description:</span> A timeless design featuring a
+                      stainless steel case and a luxurious leather strap. Perfect for any occasion.</p>
+                  </div>
+                  <div
+                    class="flex items-center gap-8 p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
+                    <!-- Add to cart button -->
+                    <button
+                      class="cart text-primary hover:text-[#C0C0C0] ease-in duration-300 bg-gray-100 hover:bg-secondary focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center border-2 hover:border-none border-secondary ">
+                      Add to cart
+                    </button>
+                    <button
+                      class="py-2.5 px-5  text-sm font-medium text-primary hover:text-[#C0C0C0] rounded-md border-2 hover:border-none border-secondary hover:bg-secondary"
+                      id="cancel">Cancel</button>
+                    <p class="message text-green-600 font-bold"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="md:col-span-4 col-span-12  p-2  rounded-lg ">
+        <div><img src="./img/Vintage/Vintage6.jpg" alt="" class="w-64 md:w-full md:h-[280px] h-[160px]"></div>
+        <div>
+          <p class="border border-secondary w-[100%] px-10 my-4"></p>
+          <p class="text-[#C0C0C0]">Retro Prestige</p>
+          <p class="text-[1.1rem] font-semibold text-[#C0C0C0]">$2,800</p>
+          <div class="mt-2">
+            <button data-modal-target="default-mod" data-modal-toggle="default-mod"
+              class="px-10 py-3 rounded-md border border-secondary bg-none hover:bg-secondary ease-in duration-300 w-[100%] text-[#C0C0C0] hover:text-primary font-medium"
+              type="button">View Details</button>
+          </div>
+
+
+          <div id="mod">
+            <!-- Main modal -->
+            <div id="default-mod" tabindex="-1" aria-hidden="true"
+              class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 mt-6">
+              <div class="relative p-4  max-w-xl max-h-full">
+                <!-- Modal content -->
+                <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                  <!-- Modal header -->
+                  <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-[#C0C0C0]">
+                      Retro Prestige
+                    </h3>
+                    <button type="button"
+                      class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-[#C0C0C0]"
+                      data-modal-hide="default-mod">
+                      <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                      </svg>
+                      <span class="sr-only">Close modal</span>
+                    </button>
+                  </div>
+                  <!-- Modal body -->
+                  <div class=" md:p-5 space-y-4 flex md:flex-row flex-col gap-4 items-center justify-center">
+                    <img src="./img/Vintage/Vintage6.jpg" alt="" class="w-[280px] h-[280px] rounded-md">
+
+                  </div>
+                  <!-- Modal footer -->
+                  <div class="px-6">
+                    <p class="text-primary"><span class="font-bold">Description:</span>The Retro Prestige Watch
+                      features a vintage design, precise timekeeping, a sleek leather strap, and a durable stainless
+                      steel case.</p>
+                  </div>
+                  <div
+                    class="flex items-center gap-8 p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
+                    <!-- Add to cart button -->
+                    <button
+                      class="cart text-primary hover:text-[#C0C0C0] ease-in duration-300 bg-gray-100 hover:bg-secondary focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center border-2 hover:border-none border-secondary ">
+                      Add to cart
+                    </button>
+                    <button
+                      class="py-2.5 px-5  text-sm font-medium text-primary hover:text-[#C0C0C0] rounded-md border-2 hover:border-none border-secondary hover:bg-secondary"
+                      id="cancel">Cancel</button>
+                    <p class="message text-green-600 font-bold"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="md:col-span-4 col-span-12  p-2  rounded-lg  ">
+        <div><img src="img/Vintage/Vintage7.jpg" alt="" class="w-full md:h-[280px] h-[160px]"></div>
+        <div>
+          <p class="border border-secondary w-[100%] px-10 my-4"></p>
+          <p class="text-[#C0C0C0]">Classic Legacy </p>
+          <p class="text-[1.1rem] font-semibold text-[#C0C0C0]">$4,200</p>
+          <div class="mt-2">
+            <button data-modal-target="default-moda" data-modal-toggle="default-moda"
+              class="px-10 py-3 rounded-md border border-secondary bg-none hover:bg-secondary ease-in duration-300 w-[100%] text-[#C0C0C0] hover:text-primary font-medium"
+              type="button">View Details</button>
+          </div>
+
+          <div id="mod">
+            <!-- Main modal -->
+            <div id="default-moda" tabindex="-1" aria-hidden="true"
+              class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 mt-6">
+              <div class="relative p-4  max-w-xl max-h-full">
+                <!-- Modal content -->
+                <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                  <!-- Modal header -->
+                  <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-[#C0C0C0]">
+                      Classic Legacy
+                    </h3>
+                    <button type="button"
+                      class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-[#C0C0C0]"
+                      data-modal-hide="default-moda">
+                      <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                      </svg>
+                      <span class="sr-only">Close modal</span>
+                    </button>
+                  </div>
+                  <!-- Modal body -->
+                  <div class=" md:p-5 space-y-4 flex md:flex-row flex-col gap-4 items-center justify-center">
+                    <img src="img/Vintage/Vintage7.jpg" alt="" class="w-[280px] h-[280px] ">
+
+                  </div>
+                  <!-- Modal footer -->
+                  <div class="px-6">
+                    <p class="text-primary"><span class="font-bold">Description:</span> The Classic Legacy Watch
+                      combines timeless style with reliable performance, featuring a sophisticated design, leather
+                      strap, and durable stainless steel case.</p>
+                  </div>
+                  <div
+                    class="flex items-center gap-8 p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
+                    <!-- Add to cart button -->
+                    <button
+                      class="cart text-primary hover:text-[#C0C0C0] ease-in duration-300 bg-gray-100 hover:bg-secondary focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center border-2 hover:border-none border-secondary ">
+                      Add to cart
+                    </button>
+                    <button
+                      class="py-2.5 px-5  text-sm font-medium text-primary hover:text-[#C0C0C0] rounded-md border-2 hover:border-none border-secondary hover:bg-secondary"
+                      id="cancel">Cancel</button>
+                    <p class="message text-green-600 font-bold"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+
+
+
+    <!-- ==========second 3 vintage watches===========s -->
+
+    <div class="grid grid-cols-12  justify-center w-[80%] py-10 px-10 gap-6">
+      <div class="md:col-span-4 col-span-12  p-2  rounded-lg border-secondary">
+        <div class="flex justify-center"><img src="img/Vintage/Vintage8-removebg-preview.png" alt=""
+            class="w-72 md:h-[280px] h-[160px] flex justify-center items-center"></div>
+        <div>
+          <p class="border border-secondary w-[100%] px-10 my-4"></p>
+          <p class="text-[#C0C0C0]">Antique Majesty</p>
+          <p class="text-[1.1rem] font-semibold">$5,500</p>
+          <div class="mt-2">
+            <button
+              onclick="openPopup('Antique Majesty', 'The Antique Majesty Watch exudes timeless grandeur with its vintage-inspired design, luxurious leather strap, and robust stainless steel construction, embodying elegance and sophistication in every detail.', 'Antique Majesty', 'img/Vintage/Vintage8-removebg-preview.png')"
+              class="px-10 py-3 rounded-md border border-secondary bg-none hover:bg-secondary ease-in duration-300 w-[100%] text-[#C0C0C0] hover:text-primary font-medium">View
+              Details</button>
+          </div>
+        </div>
+      </div>
+      <div class="md:col-span-4 col-span-12  p-2  rounded-lg border-secondary ">
+        <div class="flex justify-center"><img src="img/Vintage/V_intage10-removebg-preview.png" alt=""
+            class="w-72 md:h-[280px] h-[160px]"></div>
+        <div>
+          <p class="border border-secondary w-[100%] px-10 my-4"></p>
+          <p class="text-[#C0C0C0]">Vintage Splendor </p>
+          <p class="text-[1.1rem] font-semibold">$4,500</p>
+          <div class="mt-2">
+            <button
+              onclick="openPopup('Vintage Splendor', 'The Vintage Splendour Watch captures timeless allure with its retro-inspired design, crafted leather strap, and enduring stainless steel case, blending classic aesthetics with modern reliability.', 'Vintage Splendor', 'img/Vintage/V_intage10-removebg-preview.png')"
+              class="px-10 py-3 rounded-md border border-secondary bg-none hover:bg-secondary ease-in duration-300 w-[100%] text-[#C0C0C0] hover:text-primary font-medium">View
+              Details</button>
+          </div>
+        </div>
+      </div>
+      <div class="md:col-span-4 col-span-12  p-2  rounded-lg border-secondary ">
+        <div class="flex justify-center"><img src="img/Vintage/Vintage9-removebg-preview.png" alt=""
+            class="w-72 md:h-[280px] h-[160px]"></div>
+        <div>
+          <p class="border border-secondary w-[100%] px-10 my-4"></p>
+          <p class="text-[#C0C0C0]">Retro Timepiece</p>
+          <p class="text-[1.1rem] font-semibold">$3,500</p>
+          <div class="mt-2">
+            <button
+              onclick="openPopup('Retro Timepiece', 'The Retro Timepiece Watch blends nostalgic charm with modern craftsmanship, boasting a vintage-inspired dial, a genuine leather band, and a durable stainless steel casing, embodying timeless sophistication and reliability.', 'Retro Timepiece', 'img/Vintage/Vintage9-removebg-preview.png')"
+              class="px-10 py-3 rounded-md border border-secondary bg-none hover:bg-secondary ease-in duration-300 w-[100%] text-[#C0C0C0] hover:text-primary font-medium">View
+              Details</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!--vintage wrist watch end  -->
+
+  <div class="hidden" id="popup">
+    <!-- Popup Window -->
+    <div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-40 mt-14 py-9 px-6">
+      <div class="bg-white flex flex-col justify-center items-center rounded-lg  relative w-11/12 md:w-1/2">
+        <button onclick="closePopup()" class="absolute top-2 right-2 text-black">&times;</button>
+        <h3 id="popupTitle" class="text-xl text-primary font-bold mb-2"></h3>
+        <p id="popupSubtitle" class="text-gray-600 mb-4"></p>
+        <img id="popupImage" src="image/vintage5.jpg" alt="Watch Image"
+          class="flex justify-center items-center h-64 object-cover mb-4">
+        <div class="flex justify-center gap-8 p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
+          <!-- Add to cart button -->
+          <button
+            class="cart text-primary text-nowrap pl-4 hover:text-[#C0C0C0] ease-in duration-300 bg-gray-100 hover:bg-secondary focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2.5 text-center border-2 hover:border-none border-secondary ">
+            Add to cart
+          </button>
+          <button
+            class="py-2.5 px-5  text-sm font-medium text-primary hover:text-[#C0C0C0] bg-gray-100 rounded-md border-2 hover:border-none border-secondary hover:bg-secondary"
+            id="cancel">Cancel</button>
+          <p class="message text-green-600 font-bold"></p>
+        </div>
+        <p id="popupDescription" class="t"></p>
+      </div>
+    </div>
+  </div>
+
+ 
+
+
+
+  <!-- Our Latest News Start -->
+  <div class="text-center mt-[250px]" id="News">
+    <h1 class="text-[#C0C0C0]"> <span class="text-[#d6a653fd]">Our Latest</span> News of the Week</h1>
+  </div>
+
+  <div class="grid grid-cols-1  md:grid-cols-2 sm:mx-auto md:mx-72 w-[80%]">
+    <div class="p-10  "><img src="./img/New_blogs_internal_images_6.webp" alt="" class=" w-fit"></div>
+    <div class="p-10 space-y-5 flex flex-col justify-center col-span-12 md:col-span-1 mx-auto">
+      <h1 class="text-[#C0C0C0] ">EXQUISITE WORKS OF ART</h1>
+      <h5 class="text-[#C0C0C0] ">4/9/2024</h5>
+      <h6 class="text-[#C0C0C0] ">#Watches</h6>
+      <p class="text-[#C0C0C0]  col-span-12 md:col-span-1">The creation of a dial is a unique form of alchemy and is the coming together of
+        traditional craftsmanship and
+        cutting-edge technology. What starts out as a bare metal canvas, will gather rich embellishments promising a
+        watch a distinctive personality. With a capacity to design and engineer this iconic component entirely in-house,
+        Rolex is a master of the craft.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2  sm:mx-auto md:mx-72 w-[80%] mt-[50px] ">
+    <div class="p-10 "><img src="./img/images (4).jpeg" alt=""
+        class="h-[400px] w-[600px]"></div>
+    <div class="p-10 space-y-5 flex flex-col justify-center">
+      <h1 class="text-[#C0C0C0]"> OYSTER PERPETUAL <br> GMT-MASTER II</h1>
+      <h5 class="text-[#C0C0C0]">4/9/2024</h5>
+      <h6 class="text-[#C0C0C0]">#Watches</h6>
+      <p class="text-[#C0C0C0] flex justify-center items-center">The 24-hour hand of the Oyster Perpetual GMT-Master II
+        displays much more than just an alternative time zone. It points to another location that resonates with the
+        wearer - a reminder of the emotions that accompany each traveller.
+    </div>
+
+
+    
+
+
+  </div>
+  <!-- Our Latest News end -->
+
+
+  <!-- Luxury Watches start -->
+  <section class="w-[90%] flex flex-col items-center justify-center mx-auto py-10 mt-[200px]" id="LuxuryWatches">
+    <div class="text-[#C0C0C0] text-center ">
+      <h3 class="text-3xl uppercase font-semibold font-display"><span class="text-[#d6a653fd]">Luxurious</span> Elegance
+      </h3><br>
+      <p class="text-lg">A classic timepiece from the 1950s, featuring intricate details and a timeless design.</p>
+    </div>
+    <!-- ==========first 3 Smart wristwatch===========s -->
+    <div class="grid grid-cols-12 items-center justify-center w-[80%] py-10 px-10 gap-6">
+      <div class="md:col-span-4 col-span-12  p-2  rounded-lg border-secondary">
+        <div class="flex justify-center"><img src="img/./Luxury/lux 7.jpg" alt=""
+            class="w-fit md:h-[280px] h-[160px] flex justify-center items-center"></div>
+        <div>
+          <p class="border border-secondary w-[100%] px-10 my-4"></p>
+          <p class="text-[#C0C0C0]">Antique Majesty</p>
+          <p class="text-[1.1rem] font-semibold">$5,500</p>
+          <div class="mt-2">
+            <button
+              onclick="openPopup('Antique Majesty', 'The Antique Majesty Watch exudes timeless grandeur with its vintage-inspired design, luxurious leather strap, and robust stainless steel construction, embodying elegance and sophistication in every detail.', 'Antique Majesty', 'img/./Smart/smart_1-removebg-preview.png')"
+              class="px-10 py-3 rounded-md border border-secondary bg-none hover:bg-secondary ease-in duration-300 w-[100%] text-[#C0C0C0] hover:text-primary font-medium">View
+              Details</button>
+          </div>
+        </div>
+      </div>
+      <div class="md:col-span-4 col-span-12  p-2  rounded-lg border-secondary ">
+        <div class="flex justify-center"><img src="img/Luxury/lux 6.jpg" alt=""
+            class="w-72 md:h-[280px] h-[160px]"></div>
+        <div>
+          <p class="border border-secondary w-[100%] px-10 my-4"></p>
+          <p class="text-[#C0C0C0]">Vintage Splendor </p>
+          <p class="text-[1.1rem] font-semibold">$4,500</p>
+          <div class="mt-2">
+            <button
+              onclick="openPopup('Vintage Splendor', 'The Vintage Splendour Watch captures timeless allure with its retro-inspired design, crafted leather strap, and enduring stainless steel case, blending classic aesthetics with modern reliability.', 'Vintage Splendor', 'img/Smart/smaet_2-removebg-preview.png')"
+              class="px-10 py-3 rounded-md border border-secondary bg-none hover:bg-secondary ease-in duration-300 w-[100%] text-[#C0C0C0] hover:text-primary font-medium">View
+              Details</button>
+          </div>
+        </div>
+      </div>
+      <div class="md:col-span-4 col-span-12  p-2  rounded-lg border-secondary ">
+        <div class="flex justify-center"><img src="img/Luxury/lux 8.jpg" alt=""
+            class="w-72 md:h-[280px] h-[160px]"></div>
+        <div>
+          <p class="border border-secondary w-[100%] px-10 my-4"></p>
+          <p class="text-[#C0C0C0]">Retro Timepiece</p>
+          <p class="text-[1.1rem] font-semibold">$3,500</p>
+          <div class="mt-2">
+            <button
+              onclick="openPopup('Retro Timepiece', 'The Retro Timepiece Watch blends nostalgic charm with modern craftsmanship, boasting a vintage-inspired dial, a genuine leather band, and a durable stainless steel casing, embodying timeless sophistication and reliability.', 'Retro Timepiece', 'img/Smart/smart_3-removebg-preview.png')"
+              class="px-10 py-3 rounded-md border border-secondary bg-none hover:bg-secondary ease-in duration-300 w-[100%] text-[#C0C0C0] hover:text-primary font-medium">View
+              Details</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    </div>
+
+
+
+    <!-- ==========second 3 Smart watches===========s -->
+
+    <div class="grid grid-cols-12  justify-center w-[80%] py-10 px-10 gap-6">
+      <div class="md:col-span-4 col-span-12  p-2  rounded-lg border-secondary">
+        <div class="flex justify-center"><img src="img/Luxury/lux 9.jpg" alt=""
+            class="w-72 md:h-[280px] h-[160px] flex justify-center items-center"></div>
+        <div>
+          <p class="border border-secondary w-[100%] px-10 my-4"></p>
+          <p class="text-[#C0C0C0]">Antique Majesty</p>
+          <p class="text-[1.1rem] font-semibold">$5,500</p>
+          <div class="mt-2">
+            <button
+              onclick="openPopup('Antique Majesty', 'The Antique Majesty Watch exudes timeless grandeur with its vintage-inspired design, luxurious leather strap, and robust stainless steel construction, embodying elegance and sophistication in every detail.', 'Antique Majesty', 'img/./Smart/smart_4-removebg-preview.png')"
+              class="px-10 py-3 rounded-md border border-secondary bg-none hover:bg-secondary ease-in duration-300 w-[100%] text-[#C0C0C0] hover:text-primary font-medium">View
+              Details</button>
+          </div>
+        </div>
+      </div>
+      <div class="md:col-span-4 col-span-12  p-2  rounded-lg border-secondary ">
+        <div class="flex justify-center"><img src="img/Luxury/lux 10.jpg" alt=""
+            class="w-72 md:h-[280px] h-[160px]"></div>
+        <div>
+          <p class="border border-secondary w-[100%] px-10 my-4"></p>
+          <p class="text-[#C0C0C0]">Vintage Splendor </p>
+          <p class="text-[1.1rem] font-semibold">$4,500</p>
+          <div class="mt-2">
+            <button
+              onclick="openPopup('Vintage Splendor', 'The Vintage Splendour Watch captures timeless allure with its retro-inspired design, crafted leather strap, and enduring stainless steel case, blending classic aesthetics with modern reliability.', 'Vintage Splendor', 'img/Smart/smart_9-removebg-preview.png')"
+              class="px-10 py-3 rounded-md border border-secondary bg-none hover:bg-secondary ease-in duration-300 w-[100%] text-[#C0C0C0] hover:text-primary font-medium">View
+              Details</button>
+          </div>
+        </div>
+      </div>
+      <div class="md:col-span-4 col-span-12  p-2 border-hidden hover:border-u rounded-lg border-secondary ">
+        <div class="flex justify-center"><img src="img/Luxury/lux 12.jpg" alt=""
+            class="w-72 md:h-[280px] h-[160px]"></div>
+        <div>
+          <p class="border border-secondary w-[100%] px-10 my-4"></p>
+          <p class="text-[#C0C0C0]">Retro Timepiece</p>
+          <p class="text-[1.1rem] font-semibold">$3,500</p>
+          <div class="mt-2">
+            <button
+              onclick="openPopup('Retro Timepiece', 'The Retro Timepiece Watch blends nostalgic charm with modern craftsmanship, boasting a vintage-inspired dial, a genuine leather band, and a durable stainless steel casing, embodying timeless sophistication and reliability.', 'Retro Timepiece', 'img/Smart/smart_12-removebg-preview.png')"
+              class="px-10 py-3 rounded-md border border-secondary bg-none hover:bg-secondary ease-in duration-300 w-[100%] text-[#C0C0C0] hover:text-primary font-medium">View
+              Details</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- Luxury Watch end -->
+
+
+  <!-- Luxury watch Consolarion Start -->
+  <div class="text-center mt-[250px]">
+    <h1 class="text-[#C0C0C0]"> <span class="text-[#d6a653fd]">Talk To</span> Our Expert</h1>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2  w-[80%] mx-auto items-center justify-center ">
+    <div class="mt-5 flex items-center "><img src="./img/New_blogs_internal_images_6.webp" alt="" class="h-[350px]"></div>
+    <div class=" space-y-5  flex flex-col ">
+      <div class="items-center"><img src="./img/Gold Luxury Initial Logo.png" alt="" class="w-32"></div>
+      <h1 class="text-[#C0C0C0]"> LUXURY WATCHES</h1>
+      <h5 class="text-[#C0C0C0]">VIRTUAL BOUTIQUE</h5>
+      <h5 class="text-[#C0C0C0]">Let our in-house experts guide you through your own personalised shopping experience
+        from the comfort of your own home or office. Our hands-free co-browsing option allows you to sit back and chat
+        with our experts as they do the browsing for you.
+      </h5>
+      <div><button class="bg-[#d6a653fd] py-2 px-3 text-xl font-bold">START LIVE CONSULTATION*</button></div>
+    </div>
+
+  </div>
+
+  </div>
+  <!-- Luxury watch Consolarion end -->
+
+
+
+
+  <!-- ==================Smart wristwatch=============== -->
+
+  <!-- ===============Smart wristwatch sectino 2 beginning==================== -->
+  <section class="w-[90%] flex flex-col items-center justify-center mx-auto py-10 mt-[200px]" id="SmartWatches">
+    <div class="text-[#C0C0C0] text-center ">
+      <h1 class="text-3xl uppercase font-semibold font-display "><span class=" text-[#d6a653fd]">Smart</span> Elegance
+      </h1><br>
+      <p class="text-lg">A classic timepiece from the 1950s, featuring intricate details and a timeless design.</p>
+    </div>
+    <!-- ==========first 3 Smart wristwatch===========s -->
+    <div class="grid grid-cols-12 items-center justify-center w-[80%] py-10 px-10 gap-6">
+      <div class="md:col-span-4 col-span-12  p-2  rounded-lg border-secondary">
+        <div class="flex justify-center"><img src="img/./Smart/smart_1-removebg-preview.png" alt=""
+            class="w-72 md:h-[280px] h-[160px] flex justify-center items-center"></div>
+        <div>
+          <p class="border border-secondary w-[100%] px-10 my-4"></p>
+          <p class="text-[#C0C0C0]">Antique Majesty</p>
+          <p class="text-[1.1rem] font-semibold">$5,500</p>
+          <div class="mt-2">
+            <button
+              onclick="openPopup('Antique Majesty', 'The Antique Majesty Watch exudes timeless grandeur with its vintage-inspired design, luxurious leather strap, and robust stainless steel construction, embodying elegance and sophistication in every detail.', 'Antique Majesty', 'img/./Smart/smart_1-removebg-preview.png')"
+              class="px-10 py-3 rounded-md border border-secondary bg-none hover:bg-secondary ease-in duration-300 w-[100%] text-[#C0C0C0] hover:text-primary font-medium">View
+              Details</button>
+          </div>
+        </div>
+      </div>
+      <div class="md:col-span-4 col-span-12  p-2  rounded-lg border-secondary ">
+        <div class="flex justify-center"><img src="img/Smart/smaet_2-removebg-preview.png" alt=""
+            class="w-72 md:h-[280px] h-[160px]"></div>
+        <div>
+          <p class="border border-secondary w-[100%] px-10 my-4"></p>
+          <p class="text-[#C0C0C0]">Vintage Splendor </p>
+          <p class="text-[1.1rem] font-semibold">$4,500</p>
+          <div class="mt-2">
+            <button
+              onclick="openPopup('Vintage Splendor', 'The Vintage Splendour Watch captures timeless allure with its retro-inspired design, crafted leather strap, and enduring stainless steel case, blending classic aesthetics with modern reliability.', 'Vintage Splendor', 'img/Smart/smaet_2-removebg-preview.png')"
+              class="px-10 py-3 rounded-md border border-secondary bg-none hover:bg-secondary ease-in duration-300 w-[100%] text-[#C0C0C0] hover:text-primary font-medium">View
+              Details</button>
+          </div>
+        </div>
+      </div>
+      <div class="md:col-span-4 col-span-12  p-2  rounded-lg border-secondary ">
+        <div class="flex justify-center"><img src="img/Smart/smart_3-removebg-preview.png" alt=""
+            class="w-72 md:h-[280px] h-[160px]"></div>
+        <div>
+          <p class="border border-secondary w-[100%] px-10 my-4"></p>
+          <p class="text-[#C0C0C0]">Retro Timepiece</p>
+          <p class="text-[1.1rem] font-semibold">$3,500</p>
+          <div class="mt-2">
+            <button
+              onclick="openPopup('Retro Timepiece', 'The Retro Timepiece Watch blends nostalgic charm with modern craftsmanship, boasting a vintage-inspired dial, a genuine leather band, and a durable stainless steel casing, embodying timeless sophistication and reliability.', 'Retro Timepiece', 'img/Smart/smart_3-removebg-preview.png')"
+              class="px-10 py-3 rounded-md border border-secondary bg-none hover:bg-secondary ease-in duration-300 w-[100%] text-[#C0C0C0] hover:text-primary font-medium">View
+              Details</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    </div>
+
+
+
+    <!-- ==========second 3 Smart watches===========s -->
+
+    <div class="grid grid-cols-12  justify-center w-[80%] py-10 px-10 gap-6">
+      <div class="md:col-span-4 col-span-12  p-2  rounded-lg border-secondary">
+        <div class="flex justify-center"><img src="img/./Smart/smart_4-removebg-preview.png" alt=""
+            class="w-72 md:h-[280px] h-[160px] flex justify-center items-center"></div>
+        <div>
+          <p class="border border-secondary w-[100%] px-10 my-4"></p>
+          <p class="text-[#C0C0C0]">Antique Majesty</p>
+          <p class="text-[1.1rem] font-semibold">$5,500</p>
+          <div class="mt-2">
+            <button
+              onclick="openPopup('Antique Majesty', 'The Antique Majesty Watch exudes timeless grandeur with its vintage-inspired design, luxurious leather strap, and robust stainless steel construction, embodying elegance and sophistication in every detail.', 'Antique Majesty', 'img/./Smart/smart_4-removebg-preview.png')"
+              class="px-10 py-3 rounded-md border border-secondary bg-none hover:bg-secondary ease-in duration-300 w-[100%] text-[#C0C0C0] hover:text-primary font-medium">View
+              Details</button>
+          </div>
+        </div>
+      </div>
+      <div class="md:col-span-4 col-span-12  p-2  rounded-lg border-secondary ">
+        <div class="flex justify-center"><img src="img/Smart/smart_9-removebg-preview.png" alt=""
+            class="w-72 md:h-[280px] h-[160px]"></div>
+        <div>
+          <p class="border border-secondary w-[100%] px-10 my-4"></p>
+          <p class="text-[#C0C0C0]">Vintage Splendor </p>
+          <p class="text-[1.1rem] font-semibold">$4,500</p>
+          <div class="mt-2">
+            <button
+              onclick="openPopup('Vintage Splendor', 'The Vintage Splendour Watch captures timeless allure with its retro-inspired design, crafted leather strap, and enduring stainless steel case, blending classic aesthetics with modern reliability.', 'Vintage Splendor', 'img/Smart/smart_9-removebg-preview.png')"
+              class="px-10 py-3 rounded-md border border-secondary bg-none hover:bg-secondary ease-in duration-300 w-[100%] text-[#C0C0C0] hover:text-primary font-medium">View
+              Details</button>
+          </div>
+        </div>
+      </div>
+      <div class="md:col-span-4 col-span-12  p-2 border-hidden hover:border-u rounded-lg border-secondary ">
+        <div class="flex justify-center"><img src="img/Smart/smart_12-removebg-preview.png" alt=""
+            class="w-72 md:h-[280px] h-[160px]"></div>
+        <div>
+          <p class="border border-secondary w-[100%] px-10 my-4"></p>
+          <p class="text-[#C0C0C0]">Retro Timepiece</p>
+          <p class="text-[1.1rem] font-semibold">$3,500</p>
+          <div class="mt-2">
+            <button
+              onclick="openPopup('Retro Timepiece', 'The Retro Timepiece Watch blends nostalgic charm with modern craftsmanship, boasting a vintage-inspired dial, a genuine leather band, and a durable stainless steel casing, embodying timeless sophistication and reliability.', 'Retro Timepiece', 'img/Smart/smart_12-removebg-preview.png')"
+              class="px-10 py-3 rounded-md border border-secondary bg-none hover:bg-secondary ease-in duration-300 w-[100%] text-[#C0C0C0] hover:text-primary font-medium">View
+              Details</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- ===============Smart wristwatch section 2 ending==================== -->
+  <!-- Smart wristwatch end   -->
+
+
+  
+
+  <!-- Gallery start -->
+
+  <div class="max-w-7xl mx-auto py-8" id="Gallery">
+    <h1 class="text-3xl font-bold text-center mb-8 text-[#C0C0C0]">Gallery</h1>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 m-1">
+      <div class="overflow-hidden rounded-lg">
+        <img src="img/Gallery 2.jpg" alt="Image 1" class="w-full h-full object-cover">
+      </div>
+      <div class="overflow-hidden rounded-lg">
+        <img src="img//Gallery/Gallery 2.jpg" alt="Image 2" class="w-full h-full object-cover">
+      </div>
+      <div class="overflow-hidden rounded-lg">
+        <img src="img/Gallery/Gallery 5.jpg" alt="Image 3" class="w-full h-full object-cover">
+      </div>
+      <div class="overflow-hidden rounded-lg">
+        <img src="img/Gallery/Gallery 6.jpg" alt="Image 4" class="w-full h-full object-cover">
+      </div>
+      <div class="overflow-hidden rounded-lg">
+        <img src="img/Gallery/Gallery 7.jpg" alt="Image 5" class="w-full h-full object-cover">
+      </div>
+      <div class="overflow-hidden rounded-lg">
+        <img src="img/Gallery/Gallery 8.jpg" alt="Image 6" class="w-full h-full object-cover">
+      </div>
+      <div class="overflow-hidden rounded-lg">
+        <img src="img/Gallery/Gallery 9.jpg" alt="Image 7" class="w-full h-full object-cover">
+      </div>
+      <div class="overflow-hidden rounded-lg">
+        <img src="img/Gallery/Gallery 10.jpg" alt="Image 8" class="w-full h-full object-cover">
+      </div>
+    </div>
+  </div>
+
+  <!-- Gallery End -->
+
+
+  
+
+  <!-- Contact Start -->
+
+  <div class=" flex justify-center border-b border-t border-gray-300 mt[200px]" id="Contact">
+    <div class="w-[80%] p-16 text-center">
+      <h1 class="text-6xl font-semibold text-[#C0C0C0]">Contact Us</h1>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="flex items-center justify-center my-1">
+    <div class="flex flex-row  justify-center gap-10 w-[80%] py-16">
+
+      <div class="flex flex-col gap-3 items-center">
+        <div class="h-14 w-14 rounded-full flex justify-center items-center bg-blue-200"><a href="#map"><i
+              class="fa-solid fa-location-pin text-2xl text-touch"></i></a></div>
+        <h1 class="text-touch text-nowrap text-2xl"><a href="" style="text-decoration: none;"
+            class="text-[#C0C0C0] hidden md:flex"><span class="font-bold">Address:</span> 4,Olateju,Mushin,Lagos state.</a></h1>
+      </div>
+
+      <div class="flex flex-col gap-3 items-center">
+        <div class="h-14 w-14 rounded-full flex justify-center items-center bg-blue-200"><a
+            href="tel:+234-903-818-6039"><i class="fa-solid fa-phone text-2xl text-touch"></i></a></div>
+        <h1 class="text-touch text-nowrap text-2xl"><a href="tel:+234-903-818-6039" style="text-decoration: none;"
+            class="text-[#C0C0C0] hidden md:flex"><span class="font-bold">Phone no:</span> 08037268774</a>
+        </h1>
+      </div>
+
+      <div class="flex flex-col gap-3 items-center">
+        <div class="h-14 w-14 rounded-full flex justify-center items-center bg-blue-200"><a
+            href="mailto:shalomshobowale65@gmail.com"><i class="fa-solid fa-envelope text-2xl text-touch"></i></a></div>
+        <h1 class="text-touch text-nowrap text-2xl hidden md:flex"><a href="mailto:gbadegesinemmauel53@gmail.com"
+            style="text-decoration: none; " class="text-[#C0C0C0]"><span class="font-bold">Name:</span> Gbadegesin
+            Emmanuel</a></h1>
+      </div>
+
+      <div class="flex flex-col gap-3 items-center">
+        <div class="h-14 w-14 rounded-full flex justify-center items-center bg-blue-200"><i
+            class="fa-solid fa-clock text-2xl text-touch"></i></div>
+        <h1 class="text-touch text-nowrap text-2xl text-[#C0C0C0] hidden md:flex"><span class="font-bold">Time:</span> 8am - 8pm</h1>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <div class="grid grid-cols-1 md:grid-cols-2 m-6 gap-5 px-5 md:gap-0 w-[75%] justify-center items-center mx-auto">
+    <div class="h-[100vh] my-12">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d64921571.00367336!2d-70.59022070000002!3d6.708883700000023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b995b41b7dd6d%3A0xb6c08985374e0e09!2sAptech%20Computer%20Education%20-Sango%20Ota!5e0!3m2!1sen!2sng!4v1719932670289!5m2!1sen!2sng"
+        height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        class="h-full w-full"></iframe>
+    </div>
+    <div class="h-screen  text-white my-5 flex flex-col justify-center items-center">
+      <h2 class="text-center text-4xl  ">Need a Consultation?</h2>
+      <div class="p-6 rounded-lg ">
+        <form class="bg-bgColor  rounded-sm md:w-[60%] flex items-center">
+          <div>
+
+            <div class="flex md:flex-row flex-col gap-5 ">
+              <input type="text" placeholder="Name"
+                class="w-80 border-b border-0 text-black  focus:outline-none focus:ring-0  py-4 px-3">
+              <input type="tel" name="number" id="number " placeholder="Number"
+                class=" w-80  text-black border-b border-0 focus:outline-none focus:ring-0  py-4 px-3">
+            </div>
+            <div class="flex flex-col justify-center my-3">
+              <input type="email" name="email" id="main" placeholder="E-mail"
+                class="mb-4 border-b border-0 focus:outline-none focus:ring-0  py-4 px-3 ">
+              <div class=" ">
+                <select name="watchRepair" id="watchRepair" required
+                  class="mb-3  py-4 px-3 block w-full rounded-md  text-black border-gray-300 shadow-sm sm:text-sm">
+                  <option value="" class="text-black">Select an option</option>
+                  <option value="batteryReplacement" class="text-black">Battery Replacement</option>
+                  <option value="strapReplacement" class="text-black">Strap Replacement</option>
+                  <option value="dialRepair" class="text-black">Dial Repair</option>
+                  <option value="other" class="text-black">Other</option>
+                </select>
+              </div>
+              <textarea name="" id="" cols="10" rows="5" placeholder="Massages"
+                class="focus:outline-none border-b border-0 focus:ring-0 p-3"></textarea>
+            </div>
+            <button class="bg-touch py-3 px-10 rounded-sm text-bgColor mb-3">Send Message</button>
+            <p class="text-touch hover:underline hover:text-red-600"><a href="">Do you have a quary?</a></p>
+          </div>
+        </form>
+      </div>
+
+
+    </div>
+  </div>
+
+
+
+  <!-- Contact End -->
+  
+
+
+
+
+  <!-- footer -->
+
+  <div class=" border-t-2 border-[#d6a653fd]  ">
+    <div class="flex justify-center py-10">
+      <div class="flex md:flex-row flex-col gap-5 w-[90%]">
+        <div class="md:w-[30%] p-5 flex flex-col px-5 justify-center">
+          <div class="">
+            <a href="" class="flex items-center space-x-3 rtl:space-x-reverse" style="text-decoration: none;">
+              <img src="./img/Gold_Luxury_Initial_Logo-removebg-preview.png" class="h-20 w-20" alt="Flowbite Logo" />
+              <span
+                class="self-center text-2xl font-semibold whitespace-nowrap text-[#C0C0C0] hover:text-[#D6A553] dark:text-[#C0C0C0]">Alberto</span>
+            </a>
+          </div>
+          <p class="text-bgColor text-justify text-lack text-[#C0C0C0]">Our watches are made for your wrists, Crafted with Love & Care. We strive
+            to provide all kinds of watches, from classic to the latest designs. We sell authentic products with
+            warranties.</p>
+          <p class="font-bold text-[#d6a653fd]">Follow Us_</p>
+          
+
+          <div class="flex gap-5 my-3">
+            <div><img src="./img/Luxury/blue_fb-removebg-preview.png" alt="" class="w-52"></div>
+            <div><img src="./img/Luxury/blue_linkedin-removebg-preview.png" alt=""></div>
+            <div><img src="./img/Luxury/blue_twitter-removebg-preview.png" alt=""class="w-52" ></div>
+            <div><img src="./img/Luxury/insta-removebg-preview.png" alt=""></div>
+          </div>
+        </div>
+
+        <div class="md:w-[25%] list-none flex flex-col px-5 justify-center text-bgColor">
+          <p class="font-bold text-[#C0C0C0] my-3 text-xl text-[#d6a653fd]">Products</p>
+          <li class="text-[#C0C0C0]"> Smart Watch</li>
+          <li class="my-3 text-nowrap text-[#C0C0C0]"> Luxury Watch</li>
+          <li class="text-nowrap text-[#C0C0C0]"> Vintage</li>
+          <li class="my-3 text-nowrap text-[#C0C0C0]"> Digital Watch</li>
+          <li class="text-nowrap text-[#C0C0C0]"> Dress Watch</li>
+        </div>
+
+        <div class="md:w-[25%] list-none text-[#C0C0C0] flex flex-col px-5 justify-center">
+          <p class="font-bold text-[#C0C0C0] my-3 text-xl text-nowrap text-[#d6a653fd]">Quick links</p>
+          <li class="text-nowrap " " ><a class="text-[#C0C0C0]" href="index.html" style="text-decoration: none;"><i class="fa-solid text-[#d6a653fd] fa-arrow-right" style="text-decoration: none; list-style: none;"></i> Home</a></li>
+          <li class="text-nowrap " " ><a class="text-[#C0C0C0]" href="#About" style="text-decoration: none;"><i class="fa-solid text-[#d6a653fd] fa-arrow-right my-3"></i> About</a></li>
+          <li class="text-nowrap " " ><a class="text-[#C0C0C0]" href="product.html" style="text-decoration: none;"><i class="fa-solid text-[#d6a653fd] fa-arrow-right"></i> Product</a></li>
+          <li class="text-nowrap " " ><a class="text-[#C0C0C0]" href="" style="text-decoration: none;"><i class="fa-solid text-[#d6a653fd] fa-arrow-right my-3"></i> Gallery</a></li>
+          <li class="text-nowrap " " ><a class="text-[#C0C0C0]" href="contact.html" style="text-decoration: none;"><i class="fa-solid text-[#d6a653fd] fa-arrow-right"></i> Contact Us</a></li>
+        </div>
+
+        <div class="md:w-[25%] text-[#C0C0C0] flex flex-col px-5 justify-center">
+          <p class="font-bold text-xl text-[#C0C0C0] my-3 text-[#d6a653fd]">Contact Us</p>
+          <p class="text-nowrap"><i class="fa-solid text-[#d6a653fd]   fa-location-dot my-3"></i> A101, Mumbai India.</p>
+          <p class="text-nowrap"><i class="fa-solid text-[#d6a653fd]  fa-envelope"></i> demo@example.com</p>
+          <p class="text-nowrap"><i class="fa-solid text-[#d6a653fd]  fa-phone my-3"></i> +91-1234567890</p>
+          <p class="text-nowrap"><i class="fa-solid text-[#d6a653fd]  fa-clock"></i> Mon-Sat 10:00pm - 7:00pm</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+  <div class="bg-black p-2 text-center text-[#d6a653fd] font-semibold">© 2024 Copyright: Alberto</div>
+
+  <div class=" p-2 text-center text-bgColor font-semibold sticky bottom-0">
+    <marquee behavior="scroll" direction="left">
+      <div class="flex gap-10">
+        <div class="text-[#C0C0C0]" id="time"></div>
+        <div class="text-[#C0C0C0]" id="date"></div>
+        <div id="location"></div>
+      </div>
+    </marquee>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  <script src="./main.js"></script>
+</body>
+
+
+
+
+</html>
