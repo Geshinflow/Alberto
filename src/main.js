@@ -61,20 +61,3 @@ setInterval(()=>{
 
 // }
 
-const nav = document.getElementById('nav');
-window.onscroll = function () {
-  if(scrollY >= 410){
-    "nav-colored"
-  }else{
-    "nav-transparent"
-  }
-   
-    // if (document.body.scrolly >= 200 ) {
-    //     nav.classList.add("nav-colored");
-    //     nav.classList.remove("nav-transparent");
-    // } 
-    // else {
-    //     nav.classList.add("nav-transparent");
-    //     nav.classList.remove("nav-colored");
-    // }
-};
